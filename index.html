@@ -9,3 +9,76 @@
   </head>
   <body></body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <div class="home-container">
+      <header class="header">
+        <img src="img/logo.png" alt="logo" class="logo" />
+        <form action="#" class="search">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Search Products"
+          />
+          <button class="search__button">
+            <svg class="search__icon">
+              <use href="img/sprite.svg#icon-search"></use>
+            </svg>
+          </button>
+        </form>
+
+        <nav class="user-nav">
+          <div class="user-nav__icon-box">
+            <svg class="user-nav__icon">
+              <use href="img/sprite.svg#icon-shopping-cart"></use>
+            </svg>
+            <!-- <span class="user-nav__notification">13</span> -->
+          </div>
+        </nav>
+      </header>
+
+      <div class="content">
+        <nav class="sidebar">
+          <ul class="side-nav">
+            <li class="side-nav__item side-nav__item--active">
+              <a href="index.html" class="side-nav__link">
+                <!-- <svg class="side-nav__icon"> <use href="img/sprite.svg#icon-home"></use> </svg> -->
+                <span>Home</span>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="item.html" class="side-nav__link">
+                <!-- <svg class="side-nav__icon"> <use href="img/sprite.svg#icon-aircraft-take-off"></use> </svg> -->
+                <span>Products</span>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="contact.html" class="side-nav__link">
+                <!-- <svg class="side-nav__icon"> <use href="img/sprite.svg#icon-key"></use> </svg> -->
+                <span>Contact Page</span>
+              </a>
+            </li>
+            <li class="side-nav__item">
+              <a href="#" class="side-nav__link">
+                <!-- <svg class="side-nav__icon"> <use href="img/sprite.svg#icon-map"></use> </svg> -->
+                <span>Tour</span>
+              </a>
+            </li>
+          </ul>
+          <div class="legal">
+            &copy;2023 Solar Star Power. All rights reserved.
+          </div>
+        </nav>
+        <main class="solar-view"></main>
+      </div>
+    </div>
+  </body>
+</html>
