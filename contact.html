@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <!-- -----------------------------------HEADER---------------------------------- -->
     <header class="header">
       <img src="img/logo.png" alt="logo" class="logo" />
       <form action="#" class="search">
@@ -22,7 +23,6 @@
           </svg>
         </button>
       </form>
-
       <nav class="user-nav">
         <div class="user-nav__icon-box">
           <svg class="user-nav__icon">
@@ -32,7 +32,9 @@
         </div>
       </nav>
     </header>
+    <!-- MAIN  -->
     <div class="content">
+      <!-- -----------------------------SIDE NAV-------------------------------------- -->
       <nav class="sidebar-none">
         <ul class="side-nav">
           <li class="side-nav__item side-nav__item--home">
@@ -60,7 +62,7 @@
             </a>
           </li>
           <li class="side-nav__item side-nav__item--t">
-            <a href="#" class="side-nav__link">
+            <a href="tour.html" class="side-nav__link">
               <svg class="side-nav__icon">
                 <use href="img/sprite.svg#icon-address"></use>
               </svg>
@@ -72,7 +74,76 @@
           &copy;2023 Solar Star Power. All rights reserved.
         </div>
       </nav>
+      <!-- ------------------------------------CONTACT FORM---------------------------- -->
+      <div class="contact">
+        <main class="contact-container">
+          <figure class="contact-title">
+            <div class="contact-title__text">Reach out to the Stars</div>
+            <img
+              class="contact-title__img"
+              src="img/contact.png"
+              alt="contact"
+            />
+          </figure>
+          <div class="contact-form">
+            <h1 class="contact-form__title">Contact Us</h1>
+            <form action="" class="form">
+              <div class="input-box"> <input type="text" class="input" required /> <label for="">Name</label> </div>
+              <div class="input-box"> <input type="email" class="input" required /> <label for="">Email</label> </div>
+              <div class="input-box"> <input type="tel" class="input" required /> <label for="">Phone</label> </div>
+              <div class="input-box"> <textarea name="" class="input" required id="message" cols="30" rows="10" ></textarea> <label for="">Message</label> </div>
+              <button class="contact-btn">
+                <span class="contact-btn__visible">Submit</span>
+                <span class="contact-btn__invisible">Full Send!</span>
+              </button>
+            </form>
+          </div>
+        </main>
+      </div>
     </div>
+    <!-- ---------------------------------------FOOTER----------------------------------- -->
+    <footer class="footer">
+      <div class="bottom-logo">
+        <ul class="top-footer">
+          <li class="top-footer__items top-footer__items--home">
+            <a class="top-footer__links" href="index.html">Home</a>
+          </li>
+          <li class="top-footer__items">
+            <a class="top-footer__links" href="item.html">Products</a>
+          </li>
+          <li class="top-footer__items top-footer__items--cp">
+            <a class="top-footer__links" href="contact.html">Contact Us</a>
+          </li>
+          <li class="top-footer__items top-footer__items--t">
+            <a class="top-footer__links" href="tour.html">Tours</a>
+          </li>
+        </ul>
+        <a href="#" class="bottom-logo-link"
+          ><img src="img/logo.png" alt="logo" class="logo-bottom"
+        /></a>
+      </div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/" class="social-links__link"
+          ><svg class="social-links__icon social-links__icon--fa">
+            <use href="img/sprite.svg#icon-facebook"></use></svg
+        ></a>
+        <a
+          href="https://www.youtube.com/watch?v=EL-D9LrFJd4"
+          class="social-links__link"
+          ><svg class="social-links__icon social-links__icon--yt">
+            <use href="img/sprite.svg#icon-youtube"></use></svg
+        ></a>
+        <a href="https://twitter.com/" class="social-links__link"
+          ><svg class="social-links__icon social-links__icon--tw">
+            <use href="img/sprite.svg#icon-twitter"></use></svg
+        ></a>
+        <a href="https://www.instagram.com/" class="social-links__link"
+          ><svg class="social-links__icon social-links__icon--in">
+            <use href="img/sprite.svg#icon-instagram"></use></svg
+        ></a>
+        <span class="bottom-text">See you in space cowboy...</span>
+      </div>
+    </footer>
     <script src="app.js"></script>
   </body>
 </html>

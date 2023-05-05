@@ -41,7 +41,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
+  background-image: linear-gradient(to right bottom, var(--color-grey-dark-2), var(--color-grey-dark-1));
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -296,7 +296,7 @@ body {
   transition: all 0.3s ease 0s;
 }
 .social-links__icon--yt:hover {
-  fill: #FF0000;
+  fill: #ff0000;
   transition: all 0.3s ease 0s;
 }
 .social-links__icon--tw:hover {
@@ -310,6 +310,131 @@ body {
 
 .bottom-text {
   flex-basis: 100%;
+}
+
+.contact-title {
+  background-color: var(--color-black-3);
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.contact-title__text {
+  color: var(--color-grey-light-1);
+  font-size: 3.5rem;
+}
+.contact-title__img {
+  width: 32rem;
+  border-radius: 50%;
+}
+
+.contact-form {
+  flex: 1;
+  background-color: var(--color-black-3);
+}
+.contact-form__title {
+  font-size: 4rem;
+  position: relative;
+  top: 2rem;
+  left: 2rem;
+  padding: 1rem;
+  color: var(--color-grey-light-1);
+}
+
+.form {
+  padding: 0 5rem;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.input-box {
+  height: 5rem;
+  width: 100%;
+  margin: 3rem 0;
+  color: var(--color-black-1);
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 2px solid var(--color-grey-light-1);
+  border-radius: 20px;
+  outline: none;
+  padding-left: 1rem;
+  color: var(--color-grey-light-1);
+  font-size: 1.5rem;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  padding-left: 1rem;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: var(--color-grey-light-1);
+}
+
+.input-box .input:focus ~ label,
+.input-box .input:valid ~ label {
+  top: -1px;
+  left: 10px;
+  background-color: var(--color-black-3);
+  padding: 5px;
+}
+
+textarea.input {
+  resize: none;
+  height: 15rem;
+  overflow: auto;
+}
+
+.contact-btn {
+  margin-left: 5rem;
+  position: relative;
+  top: 10rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  border: none;
+  background-image: linear-gradient(to right bottom, var(--color-grey-dark-1), var(--color-black-2));
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+.contact-btn > * {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.contact-btn__visible {
+  padding: 2rem 5rem;
+}
+.contact-btn__invisible {
+  position: absolute;
+  padding: 2rem 0;
+  left: 0;
+  top: -100%;
+}
+.contact-btn:hover {
+  background-image: linear-gradient(to right bottom, var(--color-black-2), var(--color-grey-dark-1));
+}
+.contact-btn:hover .contact-btn__visible {
+  transform: translateY(100%);
+}
+.contact-btn:hover .contact-btn__invisible {
+  top: 0;
+}
+.contact-btn:focus {
+  outline: none;
+  animation: pulsate 1s infinite;
 }
 
 .header {
@@ -358,6 +483,29 @@ body {
   align-items: center;
   width: 100%;
   margin-bottom: 10rem;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  background-image: url("https://static01.nyt.com/images/2017/07/02/magazine/02meti1/02meti1-videoSixteenByNineJumbo1600-v6.gif");
+  background-size: cover;
+  background-position: bottom;
+  height: auto;
+}
+
+.contact-container {
+  width: 80rem;
+  height: 60rem;
+  background-image: linear-gradient(to right bottom, var(--color-black-2), var(--color-grey-dark-1));
+  border-radius: 10px;
+  margin-left: 15rem;
+  margin-bottom: 5rem;
+  box-shadow: 0px 5px 10px 0px rgba(71, 71, 71, 0.347);
+  overflow: hidden;
+  display: flex;
 }
 
 .footer {
