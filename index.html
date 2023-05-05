@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div class="home-container">
       <header class="header">
         <img src="img/logo.png" alt="logo" class="logo" />
         <form action="#" class="search">
@@ -46,29 +45,37 @@
       </header>
 
       <div class="content">
-        <nav class="sidebar">
+        <nav class="sidebar-none">
           <ul class="side-nav">
-            <li class="side-nav__item side-nav__item--active">
+            <li class="side-nav__item side-nav__item--home">
               <a href="index.html" class="side-nav__link">
-                <!-- <svg class="side-nav__icon"> <use href="img/sprite.svg#icon-home"></use> </svg> -->
+                <svg class="side-nav__icon">
+                  <use href="img/sprite.svg#icon-home"></use>
+                </svg>
                 <span>Home</span>
               </a>
             </li>
             <li class="side-nav__item">
               <a href="item.html" class="side-nav__link">
-                <!-- <svg class="side-nav__icon"> <use href="img/sprite.svg#icon-aircraft-take-off"></use> </svg> -->
+                <svg class="side-nav__icon">
+                  <use href="img/sprite.svg#icon-qq"></use>
+                </svg>
                 <span>Products</span>
               </a>
             </li>
-            <li class="side-nav__item">
+            <li class="side-nav__item side-nav__item--cp">
               <a href="contact.html" class="side-nav__link">
-                <!-- <svg class="side-nav__icon"> <use href="img/sprite.svg#icon-key"></use> </svg> -->
+                <svg class="side-nav__icon">
+                  <use href="img/sprite.svg#icon-paper-plane"></use>
+                </svg>
                 <span>Contact Page</span>
               </a>
             </li>
-            <li class="side-nav__item">
+            <li class="side-nav__item side-nav__item--t">
               <a href="#" class="side-nav__link">
-                <!-- <svg class="side-nav__icon"> <use href="img/sprite.svg#icon-map"></use> </svg> -->
+                <svg class="side-nav__icon">
+                  <use href="img/sprite.svg#icon-address"></use>
+                </svg>
                 <span>Tour</span>
               </a>
             </li>
@@ -77,8 +84,65 @@
             &copy;2023 Solar Star Power. All rights reserved.
           </div>
         </nav>
-        <main class="solar-view"></main>
+        <main class="solar-view">
+          <div class="info">
+            <figure class="info-content">
+              <span class="info-content__title info-content__title--stat-1">
+                Stat 1
+              </span>
+              <span class="info-content__number">888+</span>
+              <span class="info-content__text"
+                >Bringing Inovation that excites.</span
+              >
+            </figure>
+            <figure class="info-content">
+              <span class="info-content__title info-content__title--stat-2">
+                Stat 2
+              </span>
+              <span class="info-content__number">888+</span>
+              <span class="info-content__text"
+                >Bringing Inovation that excites.</span
+              >
+            </figure>
+            <figure class="info-content">
+              <span class="info-content__title info-content__title--stat-3">
+                Stat 3
+              </span>
+              <span class="info-content__number">888+</span>
+              <span class="info-content__text"
+                >Bringing Inovation that excites.</span
+              >
+            </figure>
+          </div>
+        </main>
       </div>
     </div>
+    <footer class="footer">
+      <div class="bottom-logo">
+        <ul class="top-footer">
+          <li class="top-footer__items top-footer__items--home">
+            <a class="top-footer__links" href="index.html">Home</a>
+          </li>
+          <li class="top-footer__items">
+            <a class="top-footer__links" href="item.html">Products</a>
+          </li>
+          <li class="top-footer__items top-footer__items--cp">
+            <a class="top-footer__links" href="contact.html">Contact Us</a>
+          </li>
+          <li class="top-footer__items top-footer__items--t">
+            <a class="top-footer__links" href="tour.html">Tours</a>
+          </li>
+        </ul>
+        <a href="#" class="bottom-logo-link"><img src="img/logo.png" alt="logo" class="logo-bottom" /></a>
+      </div>
+      <div class="social-links">
+        <a href="https://www.facebook.com/" class="social-links__link" ><svg class="social-links__icon social-links__icon--fa"> <use href="img/sprite.svg#icon-facebook"></use></svg ></a>
+        <a href="https://www.youtube.com/watch?v=EL-D9LrFJd4" class="social-links__link" ><svg class="social-links__icon social-links__icon--yt"> <use href="img/sprite.svg#icon-youtube"></use></svg ></a> 
+        <a href="https://twitter.com/" class="social-links__link" ><svg class="social-links__icon social-links__icon--tw"> <use href="img/sprite.svg#icon-twitter"></use></svg ></a>
+        <a href="https://www.instagram.com/" class="social-links__link" ><svg class="social-links__icon social-links__icon--in"> <use href="img/sprite.svg#icon-instagram"></use></svg ></a>
+        <span class="bottom-text">See you in space cowboy...</span>
+      </div>
+    </footer>
+    <script src="app.js"></script>href="#" 
   </body>
 </html>
