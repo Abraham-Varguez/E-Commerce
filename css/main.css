@@ -41,7 +41,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(to right bottom, var(--color-grey-dark-2), var(--color-grey-dark-1));
+  background-image: linear-gradient(to right bottom, var(--color-black-2), var(--color-black-1));
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -192,7 +192,7 @@ body {
   color: var(--color-grey-light-1);
 }
 .info-content__title {
-  font-size: 3rem;
+  font-size: 5rem;
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
   margin-right: 3.5rem;
@@ -437,6 +437,75 @@ textarea.input {
   animation: pulsate 1s infinite;
 }
 
+.wrap {
+  flex: 1;
+  position: relative;
+}
+
+.mot-title {
+  font-size: 6rem;
+  color: var(--color-grey-light-1);
+  margin: 2rem 0;
+}
+
+.slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+
+.slide1 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.582)), url(/img/tours5.jpg);
+}
+
+.slide2 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.582)), url(/img/tours3.jpeg);
+}
+
+.slide3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.582)), url(/img/tours4.jpg);
+}
+
+.slide4 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.131), rgba(0, 0, 0, 0.264)), url(/img/tours1.jpg);
+}
+
+.slide5 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.126), rgba(0, 0, 0, 0.582)), url(/img/tours2.jpg);
+}
+
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-top: 7rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#arrow-left {
+  border-width: 3rem 4rem 3rem 0;
+  border-color: transparent var(--color-grey-light-1) transparent transparent;
+  left: 0;
+  margin-left: 3.5rem;
+}
+
+#arrow-right {
+  border-width: 3rem 0 3rem 4rem;
+  border-color: transparent transparent transparent var(--color-grey-light-1);
+  right: 0;
+  margin-right: 3.5rem;
+}
+
 .header {
   font-size: 1.4rem;
   height: 8rem;
@@ -448,7 +517,7 @@ textarea.input {
 
 .content {
   display: flex;
-  height: 91.5vh;
+  height: 92vh;
 }
 
 .sidebar {
@@ -506,6 +575,16 @@ textarea.input {
   box-shadow: 0px 5px 10px 0px rgba(71, 71, 71, 0.347);
   overflow: hidden;
   display: flex;
+}
+
+#slider,
+.wrap,
+.slide-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80vw;
+  height: 73vh;
 }
 
 .footer {
