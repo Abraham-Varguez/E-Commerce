@@ -317,7 +317,7 @@ body {
   color: var(--color-grey-light-1);
   font-size: 5rem;
   text-align: center;
-  margin: 3rem 0;
+  margin: 4rem 0;
   text-transform: uppercase;
 }
 
@@ -326,12 +326,14 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(74, 74, 74);
+  background-color: var(--color-black-1);
   border-radius: 10px;
+  color: var(--color-grey-light-1);
 }
 .product__img {
   padding-top: 1rem;
-  width: 100%;
+  width: 85%;
+  height: 50%;
 }
 .product__title {
   font-size: 1.5rem;
@@ -506,23 +508,23 @@ textarea.input {
 }
 
 .slide1 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.525)), url(/img/tours5.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.525)), url(/img/img-t/tours5.jpg);
 }
 
 .slide2 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.582)), url(/img/tours3.jpeg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.582)), url(/img/img-t/tours3.jpeg);
 }
 
 .slide3 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.582)), url(/img/tours4.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.582)), url(/img/img-t/tours4.jpg);
 }
 
 .slide4 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.131), rgba(0, 0, 0, 0.264)), url(/img/tours1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.131), rgba(0, 0, 0, 0.264)), url(/img/img-t/tours1.jpg);
 }
 
 .slide5 {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.126), rgba(0, 0, 0, 0.582)), url(/img/tours2.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.126), rgba(0, 0, 0, 0.582)), url(/img/img-t/tours2.jpg);
 }
 
 .slide-content {
