@@ -9,7 +9,7 @@
   --color-primary-light: #35befd;
   --color-primary-dark: #014565;
   --color-4: #01a046;
-  --color-4-light:#1fff80;
+  --color-4-light: #1fff80;
   --color-4-dark: #003d1b;
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
@@ -27,6 +27,17 @@
   --line: 1px solid var(--color-grey-light-2);
 }
 
+/*
+0-600:    PHONE
+600-900: TABLET PORTRAIT
+900-1200: TABLET LANDSCAPE
+[1200 -1800] DEFAULT STYLE 
+1800+: BIG DESKTO
+*/
+/*
+1em = 16px when we are applying media queries
+EM is used for media queries 
+*/
 *,
 *::after,
 *::before {
@@ -38,7 +49,17 @@
 html {
   font-size: 62.5%; /* 1 rem = 10px */
   background-color: var(--color-black-1);
-  font-family: "Montserrat", sans-serif;
+  font-family: sans-serif;
+}
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 57.75em) {
+  html {
+    font-size: 50%;
+  }
 }
 
 body {
@@ -129,11 +150,27 @@ body {
   list-style: none;
   margin-top: 3.5rem;
 }
+@media only screen and (max-width: 57.75em) {
+  .side-nav {
+    display: flex;
+    margin: 0;
+  }
+}
 .side-nav__item {
   position: relative;
 }
 .side-nav__item:not(:last-child) {
   margin-bottom: 0.5rem;
+}
+@media only screen and (max-width: 57.75em) {
+  .side-nav__item:not(:last-child) {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 57.75em) {
+  .side-nav__item {
+    flex: 1;
+  }
 }
 .side-nav__item::before {
   content: "";
@@ -170,11 +207,32 @@ body {
   display: flex;
   align-items: center;
 }
+@media only screen and (max-width: 57.75em) {
+  .side-nav__link:link, .side-nav__link:visited {
+    justify-content: center;
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .side-nav__link:link, .side-nav__link:visited {
+    flex-direction: column;
+    padding: 1.5rem;
+    text-align: center;
+  }
+}
 .side-nav__icon {
   width: 1.8rem;
   height: 1.8rem;
   margin-right: 2rem;
   fill: var(--color-grey-light-1);
+}
+@media only screen and (max-width: 37.5em) {
+  .side-nav__icon {
+    margin-right: 0;
+    margin-bottom: 0.7rem;
+    width: 1.5rem;
+    height: 1.5rem;
+  }
 }
 
 .legal {
@@ -182,6 +240,32 @@ body {
   color: var(--color-grey-light-4);
   text-align: center;
   padding: 2.5rem;
+}
+@media only screen and (max-width: 57.75em) {
+  .legal {
+    display: none;
+  }
+}
+
+.h1-h {
+  color: var(--color-grey-light-3);
+  font-size: 10rem;
+  margin-top: 5rem;
+  margin-right: 28rem;
+  text-align: left;
+  font-weight: 400;
+}
+@media only screen and (max-width: 57.75em) {
+  .h1-h {
+    margin: 12rem 0;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .h1-h {
+    margin: 4rem 0 0 0;
+    font-size: 8rem;
+  }
 }
 
 .info-content {
@@ -191,12 +275,26 @@ body {
   height: 25rem;
   width: 26rem;
   color: var(--color-grey-light-1);
+  margin-top: 15rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .info-content {
+    margin: 4rem 0;
+    text-align: center;
+  }
 }
 .info-content__title {
   font-size: 5rem;
+  font-weight: 300;
   padding-bottom: 1rem;
   margin-bottom: 1.5rem;
   margin-right: 3.5rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .info-content__title {
+    font-size: 3rem;
+    margin: 0 4rem;
+  }
 }
 .info-content__title--stat-1 {
   border-bottom: 2px solid var(--color-primary-light);
@@ -210,8 +308,18 @@ body {
 .info-content__number {
   font-size: 6rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .info-content__number {
+    font-size: 3.5rem;
+  }
+}
 .info-content__text {
   font-size: 2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .info-content__text {
+    font-size: 1rem;
+  }
 }
 
 .top-footer {
@@ -339,12 +447,12 @@ body {
   font-size: 1.5rem;
   text-align: center;
   padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   font-weight: 600;
   text-transform: uppercase;
 }
 .product__description {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-align: center;
   padding: 0 2rem 2rem 2rem;
   line-height: 12px;
@@ -352,8 +460,8 @@ body {
 .product__price {
   text-align: center;
   font-weight: 600;
-  font-size: 2.5rem;
-  padding-top: 2rem;
+  font-size: 2rem;
+  padding: 2rem 0;
 }
 
 .contact-title {
@@ -438,9 +546,9 @@ body {
 }
 
 textarea.input {
-  resize: none;
   height: 15rem;
   overflow: auto;
+  padding: 1rem;
 }
 
 .contact-btn {
@@ -577,6 +685,11 @@ textarea.input {
   display: flex;
   height: auto;
 }
+@media only screen and (max-width: 57.75em) {
+  .content {
+    flex-direction: column;
+  }
+}
 
 .sidebar {
   background-color: var(--color-black-3);
@@ -592,10 +705,11 @@ textarea.input {
 
 .solar-view {
   display: flex;
+  flex-direction: column;
+  justify-content: space-around;
   flex: 1;
-  align-items: flex-end;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.295), rgba(0, 0, 0, 0.935)), url("../img/home-cover.jpg");
-  object-fit: contain;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.415), rgba(0, 0, 0, 0.935)), url("../img/home-cover.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -610,6 +724,12 @@ textarea.input {
   align-items: center;
   width: 100%;
   margin-bottom: 10rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .info {
+    flex-direction: column;
+    margin: 25rem 0;
+  }
 }
 
 .products-container {
