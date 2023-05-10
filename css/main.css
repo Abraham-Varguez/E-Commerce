@@ -63,7 +63,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(to right bottom, var(--color-black-2), var(--color-black-1));
+  background-color: var(--color-black-3);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 100vh;
@@ -148,6 +148,13 @@ body {
   width: 3rem;
   height: 3rem;
   fill: var(--color-grey-light-1);
+}
+.user-nav__icon--p {
+  width: 2.2rem;
+  height: 2.2rem;
+  fill: var(--color-grey-light-1);
+  margin-right: 2rem;
+  margin-top: 1rem;
 }
 
 .side-nav {
@@ -433,7 +440,8 @@ body {
 
 .h2-title {
   color: var(--color-grey-light-1);
-  font-size: 5rem;
+  font-size: 8rem;
+  font-weight: 400;
   text-align: center;
   margin: 4rem 0;
   text-transform: uppercase;
@@ -447,6 +455,8 @@ body {
   background-color: var(--color-black-1);
   border-radius: 10px;
   color: var(--color-grey-light-1);
+  height: 45rem;
+  width: 100%;
 }
 .product__img {
   padding-top: 1rem;
@@ -628,6 +638,7 @@ textarea.input {
 
 .mot-title {
   font-size: 6rem;
+  font-style: 400;
   color: var(--color-grey-light-1);
   margin: 3rem 0;
   text-transform: uppercase;
@@ -748,7 +759,7 @@ textarea.input {
 }
 
 .sidebar {
-  background-color: var(--color-black-3);
+  background-color: var(--color-black-2);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -801,7 +812,8 @@ textarea.input {
   margin: 2rem auto;
   max-width: 124rem;
   padding: 2rem;
-  gap: 8rem;
+  row-gap: 8rem;
+  column-gap: 10rem;
 }
 @media only screen and (max-width: 57.75em) {
   .products {
@@ -884,4 +896,85 @@ textarea.input {
 .footer {
   height: 20vh;
   color: var(--color-grey-light-1);
+}
+
+.card {
+  perspective: 150rem;
+  position: relative;
+  height: 45rem;
+  width: 31rem;
+}
+.card__side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: var(--color-grey-light-1);
+  transition: all 0.8s ease;
+  font-size: 4rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+  box-shadow: 0 1.5rem 4rem rgba(var(--color-black-4), 0.15);
+  height: 45rem;
+  width: 31rem;
+}
+.card__side--front {
+  background-color: var(--color-black-1);
+}
+.card__side--back {
+  background-image: linear-gradient(to right bottom, var(--color-black-2), var(--color-black-1));
+  transform: rotateY(180deg);
+}
+.card:hover .card__side--front {
+  transform: rotateY(-180deg);
+}
+.card:hover .card__side--back {
+  transform: rotateY(0deg);
+}
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 3.5rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
+  position: relative;
+  font-size: 2rem;
+  font-weight: 100;
+  z-index: 0;
+}
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(var(--color-black-4), 0.2);
+}
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(var(--color-black-4), 0.2);
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+.btn--black {
+  background-image: linear-gradient(to right bottom, var(--color-grey-dark-1), var(--color-black-2));
+  color: var(--color-grey-light-1);
+}
+.btn--black::after {
+  background-color: var(--color-black-1);
 }/*# sourceMappingURL=main.css.map */

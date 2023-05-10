@@ -53,13 +53,19 @@ http.onload = function () {
 
     for (let item of products) {
       output += `
-         
-      <div class="product">
+    <div class="card">
+      <div class="card__side card__side--front"> 
+        <div class="product">
         <img class="product__img" src="${item.image}" alt="${item.imageDescription}">
-        <p class="product__title">${item.title}</p>
-        <p class="product__description">${item.description}</p>
-        <p class="product__price"> <span>${item.price}</span> </p>
+          <p class="product__title">${item.title}</p>
+          <p class="product__description">${item.description}</p>
+          <p class="product__price"> <span>${item.price}</span> </p>
+        </div>
       </div>
+      <div class="card__side card__side--back">
+        <a href="#" class="btn btn--black"><svg class="user-nav__icon--p"> <use href="img/sprite.svg#icon-shopping-cart"></use> </svg>Add to Cart</a>
+      </div>
+    </div>
       `;
     }
     // and finally we will need to add the final call to post all the data into the HTML
