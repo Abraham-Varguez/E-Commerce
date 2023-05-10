@@ -946,6 +946,7 @@ textarea.input {
   font-size: 2rem;
   font-weight: 100;
   z-index: 0;
+  backface-visibility: hidden;
 }
 .btn:hover {
   transform: translateY(-3px);
@@ -969,7 +970,7 @@ textarea.input {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all 0.4s;
+  transition: all 0.2s;
 }
 .btn--black {
   background-image: linear-gradient(to right bottom, var(--color-grey-dark-1), var(--color-black-2));
